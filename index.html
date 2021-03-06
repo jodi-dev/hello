@@ -247,7 +247,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-06 14:56:18" itemprop="dateModified" datetime="2021-03-06T14:56:18-05:00">2021-03-06</time>
+        <time title="Modified: 2021-03-06 17:38:41" itemprop="dateModified" datetime="2021-03-06T17:38:41-05:00">2021-03-06</time>
       </span>
 
   
@@ -270,6 +270,19 @@
 
 <p>This pushes the default project folder to your GitHub repository.</p>
 <h2 id="Enable-GitHub-Pages"><a href="#Enable-GitHub-Pages" class="headerlink" title="Enable GitHub Pages"></a>Enable GitHub Pages</h2><p>Enable GitHub Pages in the settings tab of your repository. See detailed guide <a target="_blank" rel="noopener" href="https://pages.github.com/">here</a>.</p>
+<h2 id="GitHub-Deployment-Configurations"><a href="#GitHub-Deployment-Configurations" class="headerlink" title="GitHub Deployment Configurations"></a>GitHub Deployment Configurations</h2><p>Modify _config.yml in your project’s root repository to allow deployment to GitHub.</p>
+<p>Change the site URL. My blog repo is a sub-directory located inside my GitHub organization. I did not want to use jodi-dev.github.io for this blog, so I set the root as ‘/hello/‘; else, remove the root key or set root as /</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https:&#x2F;&#x2F;jodi-dev.github.io&#x2F;hello</span><br><span class="line">root: &#x2F;hello&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>Also set deployment type and link to the repository.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">type: &#39;git&#39;</span><br><span class="line">repo: git@github.com:jodi-dev&#x2F;hello.git</span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure>
+
+<p>Deployment by Hexo command will push to the repository on your behalf. I’m still working on understanding the nuances of using Git tracking and letting Hexo deployment commit automatically - there may likely be merge conflicts if not managed carefully. For now, do not git push to your repository but use the command <code>hexo deploy</code> only.</p>
+<h2 id="Coming-Soon"><a href="#Coming-Soon" class="headerlink" title="Coming Soon"></a>Coming Soon</h2><ul>
+<li>NexT theme installation</li>
+<li>NexT theme configuration (maybe?)</li>
+<li>Blog drafting, saving, etc</li>
+</ul>
 <h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
