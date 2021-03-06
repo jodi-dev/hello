@@ -108,6 +108,7 @@
       <h1 class="site-title">Hello</h1>
       <i class="logo-line"></i>
     </a>
+      <p class="site-subtitle" itemprop="description">Test</p>
   </div>
 
   <div class="site-nav-right">
@@ -246,7 +247,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-04 21:01:52" itemprop="dateModified" datetime="2021-03-04T21:01:52-05:00">2021-03-04</time>
+        <time title="Modified: 2021-03-06 14:54:07" itemprop="dateModified" datetime="2021-03-06T14:54:07-05:00">2021-03-06</time>
       </span>
 
   
@@ -260,25 +261,23 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>As per tradition, this will be a tutorial on how to get set up with a Hexo blog, deploy to GitHub pages, install the <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">NexT</a> theme, further customizations and blog writing bread-and-butter workflow.</p>
-<h2 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h2><ul>
-<li>hexo blog generation</li>
-<li>repo creation, enable pages, push (once), installations and git deployment setup</li>
-<li>next installation</li>
-<li>config and css customizations</li>
-<li>workflow </li>
-</ul>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-Installations"><a href="#Hexo-Installations" class="headerlink" title="Hexo Installations"></a>Hexo Installations</h2><p>Install Hexo package and initiate default project folder. Prerequisites may include Node.js, npm.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init &lt;project_name&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;project_name&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="Add-Existing-Project-to-GitHub"><a href="#Add-Existing-Project-to-GitHub" class="headerlink" title="Add Existing Project to GitHub"></a>Add Existing Project to GitHub</h2><p>Prior to <a target="_blank" rel="noopener" href="https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line">pushing project to GitHub</a>, ensure an account has been set up.</p>
+<p>Create a public repository but do not initiate with files or templates.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;project_name&gt;</span><br><span class="line">git init -b main</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git remote add origin &lt;remote_url&gt;</span><br><span class="line">git remote -v</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>This pushes the default project folder to your GitHub repository.</p>
+<h2 id="Enable-GitHub-Pages"><a href="#Enable-GitHub-Pages" class="headerlink" title="Enable GitHub Pages"></a>Enable GitHub Pages</h2><p>Enable GitHub Pages in the settings tab of your repository. See detailed guide <a target="_blank" rel="noopener" href="https://pages.github.com/">here</a>.</p>
+<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
 <h3 id="Additional-Hexo-support"><a href="#Additional-Hexo-support" class="headerlink" title="Additional Hexo support"></a>Additional Hexo support</h3><ul>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></li>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a></li>
