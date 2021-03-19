@@ -194,7 +194,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Lato, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: Didot, Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -1060,7 +1060,7 @@ pre code {
   }
 }
 .pagination {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #89a0bc;
   margin: 120px 0 0;
   text-align: center;
 }
@@ -1068,7 +1068,7 @@ pre code {
 .pagination .next,
 .pagination .page-number {
   border-bottom: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #89a0bc;
   transition: border-color 0.2s ease-in-out;
 }
 .pagination .prev:hover,
@@ -1083,7 +1083,7 @@ pre code {
   .pagination .prev,
   .pagination .next,
   .pagination .page-number {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #89a0bc;
     border-top: 0;
   }
   .pagination .prev:hover,
@@ -1097,8 +1097,8 @@ pre code {
   padding: 0;
 }
 .pagination .page-number.current {
-  background: #ccc;
-  border-color: #ccc;
+  background: #89a0bc;
+  border-color: #89a0bc;
   color: var(--content-bg-color);
 }
 .comments {
@@ -1612,7 +1612,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #000000;
+  color: #e9e9f2;
   display: inline-block;
   margin: 0 5px;
 }
