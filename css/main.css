@@ -1540,28 +1540,6 @@ pre code {
 .post-toc .nav .active-current > a:hover {
   color: #e9e9f2;
 }
-.site-state {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.4;
-}
-.site-state-item {
-  padding: 0 15px;
-}
-.site-state-item a {
-  border-bottom: 0;
-  display: block;
-}
-.site-state-item-count {
-  display: block;
-  font-size: 1em;
-  font-weight: 600;
-}
-.site-state-item-name {
-  color: #89a0bc;
-  font-size: 0.8125em;
-}
 .footer {
   color: #89a0bc;
   font-size: 0.875em;
@@ -2572,7 +2550,7 @@ ul.breadcrumb li:last-child {
   text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
 }
 .main-menu .menu-item-active::after {
-  background: #bbb;
+  background: #e9e9f2;
   border-radius: 50%;
   content: ' ';
   height: 6px;
