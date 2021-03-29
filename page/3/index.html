@@ -25,14 +25,14 @@
   </script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hello">
-<meta property="og:url" content="https://jodi-dev.github.io/hello/page/2/index.html">
+<meta property="og:url" content="https://jodi-dev.github.io/hello/page/3/index.html">
 <meta property="og:site_name" content="Hello">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Jodi Qiao">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://jodi-dev.github.io/hello/page/2/">
+<link rel="canonical" href="https://jodi-dev.github.io/hello/page/3/">
 
 
 <script class="page-configurations">
@@ -216,7 +216,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jodi-dev.github.io/hello/2021/03/19/milestone-xs/">
+    <link itemprop="mainEntityOfPage" href="https://jodi-dev.github.io/hello/2021/03/15/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/hello/images/jq.png">
@@ -229,7 +229,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/hello/2021/03/19/milestone-xs/" class="post-title-link" itemprop="url">Milestone XS</a>
+          <a href="/hello/2021/03/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
         </h2>
 
         <div class="post-meta-container">
@@ -240,14 +240,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2021-03-19 16:12:50" itemprop="dateCreated datePublished" datetime="2021-03-19T16:12:50-04:00">2021-03-19</time>
+      <time title="Created: 2021-03-15 00:00:00" itemprop="dateCreated datePublished" datetime="2021-03-15T00:00:00-04:00">2021-03-15</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-29 15:53:21" itemprop="dateModified" datetime="2021-03-29T15:53:21-04:00">2021-03-29</time>
+        <time title="Modified: 2021-03-29 15:30:22" itemprop="dateModified" datetime="2021-03-29T15:30:22-04:00">2021-03-29</time>
       </span>
 
   
@@ -260,20 +260,49 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Briefly, on hitting what I think was an “extra-small” milestone in my side-project development journey, I made <a href="simplexier.herokuapp.com">a web app</a> that:</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> (tries to solve a problem I have)</li>
-<li><input checked="" disabled="" type="checkbox"> (had a functional frontend and backend that I made from scratch)</li>
-<li><input checked="" disabled="" type="checkbox"> (is deployed somewhere)</li>
+          <p>As per tradition, this will be a tutorial on how to get set up with a Hexo blog, deploy to GitHub pages, install the <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">NexT</a> theme, further customizations and blog writing bread-and-butter workflow.</p>
+<h2 id="Hexo-Installations"><a href="#Hexo-Installations" class="headerlink" title="Hexo Installations"></a>Hexo Installations</h2><p>Install Hexo package and initiate default project folder. Prerequisites may include Node.js, npm.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init &lt;project_name&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;project_name&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Add-Existing-Project-to-GitHub"><a href="#Add-Existing-Project-to-GitHub" class="headerlink" title="Add Existing Project to GitHub"></a>Add Existing Project to GitHub</h2><p>Prior to <a target="_blank" rel="noopener" href="https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line">pushing project to GitHub</a>, ensure an account has been set up.</p>
+<p>Create a public repository but do not initiate with files or templates.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;project_name&gt;</span><br><span class="line">git init -b main</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git remote add origin &lt;remote_url&gt;</span><br><span class="line">git remote -v</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>This pushes the default project folder to your GitHub repository.</p>
+<h2 id="Enable-GitHub-Pages"><a href="#Enable-GitHub-Pages" class="headerlink" title="Enable GitHub Pages"></a>Enable GitHub Pages</h2><p>Enable GitHub Pages in the settings tab of your repository. See detailed guide <a target="_blank" rel="noopener" href="https://pages.github.com/">here</a>.</p>
+<h2 id="GitHub-Deployment-Configurations"><a href="#GitHub-Deployment-Configurations" class="headerlink" title="GitHub Deployment Configurations"></a>GitHub Deployment Configurations</h2><p>Modify _config.yml in your project’s root repository to allow deployment to GitHub.</p>
+<p>Change the site URL. My blog repo is a sub-directory located inside my GitHub organization. I did not want to use jodi-dev.github.io for this blog, so I set the root as ‘/hello/‘; else, remove the root key or set root as /</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https:&#x2F;&#x2F;jodi-dev.github.io&#x2F;hello</span><br><span class="line">root: &#x2F;hello&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>Also set deployment type and link to the repository.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">type: &#39;git&#39;</span><br><span class="line">repo: git@github.com:jodi-dev&#x2F;hello.git</span><br><span class="line">branch: main</span><br></pre></td></tr></table></figure>
+
+<p>Deployment by Hexo command will push to the repository on your behalf. I’m still working on understanding the nuances of using Git tracking and letting Hexo deployment commit automatically - there may likely be merge conflicts if not managed carefully. For now, do not git push to your repository but use the command <code>hexo deploy</code> only.</p>
+<h2 id="Coming-Soon"><a href="#Coming-Soon" class="headerlink" title="Coming Soon"></a>Coming Soon</h2><ul>
+<li>NexT theme installation</li>
+<li>NexT theme configuration (maybe?)</li>
+<li>Blog drafting, saving, etc</li>
 </ul>
-<p>While I am a long way to go from being able to create open source worthy applications that can serve the needs of many users, this was a small step in that direction. What I had done by having pushed myself to evolve beyong relying on easily google’d or youtube’d cookie cutter side project tutorials, was that I struggled, and that I overcame fear of more unknown.</p>
-<p>Specific skills I think I’ll keep working on:</p>
-<ol>
-<li>design ideation</li>
-<li>breaking down the project into smaller pieces and focus on building one freature at a time to not overwhelm myself</li>
-<li>trial run and experiment with different tools and systems in parallel with the main build</li>
-<li>learn more theoretical concepts to supplement tool uasge (i.e. code some, read some, rinse and repeat)</li>
-</ol>
+<p>A small note I’m saving here for myself: currently I am using a less-than-desirable way to change the CSS of my blog. Do not do <code>hexo clean</code>, but do delete db.json before <code>hexo deploy</code> to save changes to .styl files.</p>
+<p>Create a new post</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Run server</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>Generate static files</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>Deploy to remote sites</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<h3 id="Additional-Hexo-support"><a href="#Additional-Hexo-support" class="headerlink" title="Additional Hexo support"></a>Additional Hexo support</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a></li>
+</ul>
 
       
     </div>
@@ -293,7 +322,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/hello/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/hello/">1</a><span class="page-number current">2</span><a class="page-number" href="/hello/page/3/">3</a><a class="extend next" rel="next" href="/hello/page/3/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <a class="extend prev" rel="prev" href="/hello/page/2/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/hello/">1</a><a class="page-number" href="/hello/page/2/">2</a><span class="page-number current">3</span>
   </nav>
 
 
